@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abizar Egi Mahendra — Meta Ads Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAFAFA;
+  --white: #FFFFFF;
+  --text: #111111;
+  --sub: #555555;
+  --muted: #999999;
+  --border: #E8E8E8;
+  --accent: #2563EB;
+  --accent-bg: #EFF4FF;
+  --green: #16A34A;
+  --green-bg: #F0FDF4;
+  --r: 12px;
+}
+
+- { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+
+body {
+background: var(–bg);
+color: var(–text);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 15px;
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+position: sticky;
+top: 0;
+z-index: 99;
+background: rgba(250,250,250,0.92);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(–border);
+padding: 0 20px;
+height: 54px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.nav-logo {
+font-family: ‘Syne’, sans-serif;
+font-weight: 800;
+font-size: 17px;
+color: var(–text);
+text-decoration: none;
+}
+
+.nav-right { display: flex; gap: 8px; }
+
+.nav-btn {
+font-size: 13px;
+font-weight: 500;
+color: var(–sub);
+text-decoration: none;
+padding: 7px 14px;
+border-radius: 8px;
+transition: background 0.15s, color 0.15s;
+}
+.nav-btn:hover { background: var(–border); color: var(–text); }
+.nav-btn.primary { background: var(–text); color: #fff; }
+.nav-btn.primary:hover { opacity: 0.85; }
+
+/* ── LAYOUT ── */
+section { padding: 44px 20px; }
+.wrap { max-width: 640px; margin: 0 auto; }
+
+.label {
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 6px;
+}
+
+h2 {
+font-family: ‘Syne’, sans-serif;
+font-size: 24px;
+font-weight: 800;
+letter-spacing: -0.5px;
+margin-bottom: 6px;
+line-height: 1.15;
+}
+
+.sdesc {
+font-size: 13px;
+color: var(–sub);
+margin-bottom: 24px;
+font-weight: 300;
+}
+
+/* ── HERO ── */
+#hero {
+padding: 32px 20px 36px;
+background: var(–white);
+border-bottom: 1px solid var(–border);
+}
+
+.avail {
+display: inline-flex;
+align-items: center;
+gap: 7px;
+background: var(–green-bg);
+border: 1px solid #BBF7D0;
+padding: 5px 12px;
+border-radius: 100px;
+font-size: 12px;
+font-weight: 500;
+color: var(–green);
+margin-bottom: 18px;
+}
+
+.avail-dot {
+width: 6px; height: 6px;
+background: var(–green);
+border-radius: 50%;
+animation: blink 2s infinite;
+}
+
+@keyframes blink {
+0%,100%{opacity:1} 50%{opacity:0.3}
+}
+
+.hero-name {
+font-family: ‘Syne’, sans-serif;
+font-size: clamp(28px, 9vw, 46px);
+font-weight: 800;
+letter-spacing: -1.5px;
+line-height: 1.05;
+margin-bottom: 14px;
+}
+.hero-name .blue { color: var(–accent); }
+
+.hero-desc {
+font-size: 14px;
+color: var(–sub);
+line-height: 1.75;
+margin-bottom: 24px;
+font-weight: 300;
+max-width: 440px;
+}
+.hero-desc strong { color: var(–text); font-weight: 500; }
+
+/* Stats — always scrollable row */
+.stats-row {
+display: flex;
+gap: 10px;
+overflow-x: auto;
+padding-bottom: 2px;
+margin-bottom: 24px;
+scrollbar-width: none;
+}
+.stats-row::-webkit-scrollbar { display: none; }
+
+.stat-pill {
+flex: 0 0 auto;
+background: var(–bg);
+border: 1px solid var(–border);
+border-radius: 10px;
+padding: 11px 16px;
+text-align: center;
+min-width: 84px;
+}
+.sv {
+font-family: ‘Syne’, sans-serif;
+font-size: 19px;
+font-weight: 800;
+color: var(–text);
+letter-spacing: -0.5px;
+display: block;
+}
+.sl {
+font-size: 10px;
+color: var(–muted);
+margin-top: 2px;
+white-space: nowrap;
+}
+
+.hero-btns {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 20px;
+}
+
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 7px;
+padding: 11px 18px;
+border-radius: 10px;
+font-size: 13px;
+font-weight: 500;
+text-decoration: none;
+font-family: ‘DM Sans’, sans-serif;
+cursor: pointer;
+border: none;
+transition: all 0.15s;
+}
+.btn-dark { background: var(–text); color: #fff; }
+.btn-dark:hover { opacity: 0.85; }
+.btn-out { background: var(–white); color: var(–text); border: 1px solid var(–border); }
+.btn-out:hover { background: var(–bg); }
+
+/* Contact chips row */
+.chips-row {
+display: flex;
+gap: 8px;
+overflow-x: auto;
+scrollbar-width: none;
+}
+.chips-row::-webkit-scrollbar { display: none; }
+
+.chip-link {
+flex: 0 0 auto;
+display: flex;
+align-items: center;
+gap: 7px;
+background: var(–bg);
+border: 1px solid var(–border);
+border-radius: 9px;
+padding: 9px 14px;
+font-size: 12px;
+font-weight: 500;
+color: var(–sub);
+text-decoration: none;
+white-space: nowrap;
+transition: border-color 0.15s, color 0.15s;
+}
+.chip-link:hover { border-color: #ccc; color: var(–text); }
+
+/* ── EXPERTISE ── */
+#expertise { background: var(–white); border-bottom: 1px solid var(–border); padding-bottom: 0; }
+
+.hint {
+font-size: 11px;
+color: var(–muted);
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+gap: 4px;
+}
+
+/* Horizontal scroll container — bleeds to edge on mobile */
+.hscroll {
+display: flex;
+gap: 10px;
+overflow-x: auto;
+padding: 0 20px 28px;
+margin: 0 -20px;
+scrollbar-width: none;
+}
+.hscroll::-webkit-scrollbar { display: none; }
+
+.exp-card {
+flex: 0 0 200px;
+background: var(–bg);
+border: 1px solid var(–border);
+border-radius: var(–r);
+padding: 18px;
+}
+.exp-card.feat {
+border-color: #BFCFFF;
+background: var(–accent-bg);
+}
+.eicon { font-size: 20px; margin-bottom: 10px; display: block; }
+.etitle {
+font-family: ‘Syne’, sans-serif;
+font-size: 13px;
+font-weight: 700;
+margin-bottom: 7px;
+line-height: 1.3;
+}
+.edesc { font-size: 12px; color: var(–sub); line-height: 1.6; font-weight: 300; }
+.etags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.etag {
+font-size: 10px;
+padding: 3px 7px;
+border-radius: 5px;
+background: var(–white);
+border: 1px solid var(–border);
+color: var(–sub);
+white-space: nowrap;
+}
+.exp-card.feat .etag {
+background: #fff;
+border-color: #BFCFFF;
+color: var(–accent);
+}
+
+/* ── TIMELINE ── */
+#experience { background: var(–bg); border-bottom: 1px solid var(–border); }
+
+.timeline { position: relative; }
+.timeline::before {
+content: ‘’;
+position: absolute;
+left: 6px; top: 8px; bottom: 0;
+width: 1px;
+background: var(–border);
+}
+
+.ti {
+padding-left: 26px;
+padding-bottom: 32px;
+position: relative;
+}
+.ti:last-child { padding-bottom: 0; }
+
+.tdot {
+position: absolute;
+left: 1px; top: 7px;
+width: 11px; height: 11px;
+border-radius: 50%;
+background: var(–border);
+border: 2px solid var(–bg);
+}
+.ti.now .tdot { background: var(–green); }
+
+.ti-head {
+display: flex;
+align-items: flex-start;
+gap: 8px;
+margin-bottom: 3px;
+}
+.ti-role {
+font-family: ‘Syne’, sans-serif;
+font-size: 15px;
+font-weight: 700;
+flex: 1;
+min-width: 0;
+}
+.tbadge {
+font-size: 10px;
+font-weight: 600;
+padding: 2px 8px;
+border-radius: 100px;
+flex-shrink: 0;
+margin-top: 2px;
+}
+.bg-green { background: var(–green-bg); color: var(–green); border: 1px solid #BBF7D0; }
+.bg-gray { background: var(–bg); color: var(–muted); border: 1px solid var(–border); }
+
+.ti-co { font-size: 13px; color: var(–sub); }
+.ti-per { font-size: 11px; color: var(–muted); margin-bottom: 10px; margin-top: 2px; }
+
+.ti-pts { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.ti-pts li {
+font-size: 13px;
+color: var(–sub);
+padding-left: 13px;
+position: relative;
+line-height: 1.55;
+font-weight: 300;
+}
+.ti-pts li::before { content: ‘–’; position: absolute; left: 0; color: var(–muted); }
+.ti-pts li strong { color: var(–text); font-weight: 500; }
+
+/* ── CERTIFICATIONS ── */
+#certifications { background: var(–white); border-bottom: 1px solid var(–border); padding-bottom: 0; }
+
+.cert-card {
+flex: 0 0 176px;
+background: var(–bg);
+border: 1px solid var(–border);
+border-radius: var(–r);
+padding: 16px;
+}
+.cicon { font-size: 18px; margin-bottom: 9px; display: block; }
+.cname { font-size: 12px; font-weight: 500; line-height: 1.4; margin-bottom: 3px; }
+.corg { font-size: 11px; color: var(–muted); }
+.cyear { font-size: 11px; color: var(–accent); margin-top: 3px; font-weight: 500; }
+
+/* ── EDUCATION ── */
+#education { background: var(–bg); border-bottom: 1px solid var(–border); }
+
+.edu-card {
+background: var(–white);
+border: 1px solid var(–border);
+border-radius: var(–r);
+padding: 18px;
+display: flex;
+align-items: center;
+gap: 14px;
+}
+.edu-icon {
+width: 44px; height: 44px;
+background: var(–accent-bg);
+border-radius: 10px;
+display: flex; align-items: center; justify-content: center;
+font-size: 20px;
+flex-shrink: 0;
+}
+.edu-deg { font-family: ‘Syne’, sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.edu-sch { font-size: 13px; color: var(–sub); margin-bottom: 7px; }
+.edu-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.echip {
+font-size: 11px;
+padding: 3px 9px;
+border-radius: 6px;
+background: var(–bg);
+border: 1px solid var(–border);
+color: var(–sub);
+}
+.echip.hi { background: var(–accent-bg); border-color: #BFCFFF; color: var(–accent); font-weight: 500; }
+
+/* ── CONTACT ── */
+#contact { background: var(–white); }
+
+.ccard {
+background: var(–bg);
+border: 1px solid var(–border);
+border-radius: 16px;
+padding: 24px;
+}
+.ccard h3 {
+font-family: ‘Syne’, sans-serif;
+font-size: 19px;
+font-weight: 800;
+letter-spacing: -0.3px;
+margin-bottom: 5px;
+}
+.ccard p { font-size: 13px; color: var(–sub); margin-bottom: 20px; font-weight: 300; }
+
+.clinks { display: flex; flex-direction: column; gap: 9px; margin-bottom: 16px; }
+
+.clink {
+display: flex;
+align-items: center;
+gap: 12px;
+background: var(–white);
+border: 1px solid var(–border);
+border-radius: var(–r);
+padding: 13px 14px;
+text-decoration: none;
+color: var(–text);
+transition: border-color 0.15s;
+}
+.clink:hover { border-color: #ccc; }
+
+.cl-icon {
+width: 34px; height: 34px;
+border-radius: 8px;
+display: flex; align-items: center; justify-content: center;
+font-size: 15px;
+flex-shrink: 0;
+}
+.cl-t { font-size: 13px; font-weight: 500; }
+.cl-v { font-size: 11px; color: var(–muted); }
+.cl-arr { color: var(–muted); font-size: 13px; margin-left: auto; }
+
+.dl-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+width: 100%;
+background: var(–text);
+color: #fff;
+padding: 13px;
+border-radius: var(–r);
+font-size: 13px;
+font-weight: 500;
+text-decoration: none;
+cursor: pointer;
+border: none;
+font-family: ‘DM Sans’, sans-serif;
+transition: opacity 0.15s;
+}
+.dl-btn:hover { opacity: 0.85; }
+
+/* ── FOOTER ── */
+footer {
+padding: 18px 20px;
+text-align: center;
+font-size: 11px;
+color: var(–muted);
+border-top: 1px solid var(–border);
+}
+
+/* ── REVEAL ── */
+.rev {
+opacity: 0;
+transform: translateY(14px);
+transition: opacity 0.5s, transform 0.5s;
+}
+.rev.on { opacity: 1; transform: translateY(0); }
+
+/* ── DESKTOP ── */
+@media (min-width: 720px) {
+section { padding: 60px 40px; }
+#hero { padding: 56px 40px; }
+nav { padding: 0 40px; }
+.hscroll {
+flex-wrap: wrap;
+overflow-x: visible;
+margin: 0;
+padding: 0 0 28px;
+}
+.exp-card { flex: 0 0 185px; }
+.cert-card { flex: 0 0 170px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <a href="#" class="nav-logo">Abizar.</a>
+  <div class="nav-right">
+    <a href="#experience" class="nav-btn">Experience</a>
+    <a href="#contact" class="nav-btn primary">Hire Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section id="hero">
+  <div class="wrap">
+    <div class="avail"><span class="avail-dot"></span>Open to opportunities</div>
+    <h1 class="hero-name">Meta Ads<br><span class="blue">Specialist</span></h1>
+    <p class="hero-desc">Hi, I'm <strong>Abizar Egi Mahendra</strong> — performance marketer with <strong>3+ years</strong> running data-driven campaigns on Meta & Google Ads. Based in Surabaya, Indonesia.</p>
+
+```
+<div class="stats-row">
+  <div class="stat-pill"><span class="sv">5.6%</span><div class="sl">Best CTR</div></div>
+  <div class="stat-pill"><span class="sv">Rp165</span><div class="sl">Lowest CPC</div></div>
+  <div class="stat-pill"><span class="sv">−70%</span><div class="sl">Report Time</div></div>
+  <div class="stat-pill"><span class="sv">&lt;Rp1K</span><div class="sl">CPC Target</div></div>
+  <div class="stat-pill"><span class="sv">3+</span><div class="sl">Yrs Exp.</div></div>
+</div>
+
+<div class="hero-btns">
+  <a href="#contact" class="btn btn-dark">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    Get In Touch
+  </a>
+  <button onclick="downloadCV()" class="btn btn-out">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+    Download CV
+  </button>
+</div>
+
+<div class="chips-row">
+  <a href="https://wa.me/6289515192171" target="_blank" class="chip-link">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    089515192171
+  </a>
+  <a href="mailto:abizaregi7@gmail.com" class="chip-link">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    abizaregi7@gmail.com
+  </a>
+  <a href="https://linkedin.com/in/abizar-egi-mahendra" target="_blank" class="chip-link">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+
+<section id="expertise">
+  <div class="wrap">
+    <div class="label">What I Do</div>
+    <h2>Core Expertise</h2>
+    <p class="sdesc">Meta Ads sebagai fokus utama, didukung analytics, landing page, dan creative strategy.</p>
+    <div class="hint">← Geser →</div>
+  </div>
+  <div class="hscroll rev">
+    <div class="exp-card feat">
+      <span class="eicon">🎯</span>
+      <div class="etitle">Meta Ads Management</div>
+      <p class="edesc">End-to-end strategy, setup, optimization, and daily monitoring across multiple client accounts.</p>
+      <div class="etags">
+        <span class="etag">Campaign Setup</span>
+        <span class="etag">Audience Targeting</span>
+        <span class="etag">Facebook Pixel</span>
+        <span class="etag">Budget Optim.</span>
+      </div>
+    </div>
+    <div class="exp-card feat">
+      <span class="eicon">⚡</span>
+      <div class="etitle">Google Ads</div>
+      <p class="edesc">Search, Display & AI-Powered Performance campaigns. Certified by Google Skillshop.</p>
+      <div class="etags">
+        <span class="etag">Search Ads</span>
+        <span class="etag">Performance Max</span>
+        <span class="etag">AI-Powered Ads</span>
+      </div>
+    </div>
+    <div class="exp-card feat">
+      <span class="eicon">📊</span>
+      <div class="etitle">Performance Reporting</div>
+      <p class="edesc">Custom templates that reduced reporting time by 70%. Monthly client reports & proposals.</p>
+      <div class="etags">
+        <span class="etag">Google Analytics</span>
+        <span class="etag">Data Studio</span>
+        <span class="etag">KPI Tracking</span>
+      </div>
+    </div>
+    <div class="exp-card">
+      <span class="eicon">🏗️</span>
+      <div class="etitle">Landing Pages</div>
+      <p class="edesc">Conversion-focused pages that lowered cost per LP view to under Rp450.</p>
+      <div class="etags">
+        <span class="etag">CRO</span>
+        <span class="etag">A/B Testing</span>
+        <span class="etag">Tracking</span>
+      </div>
+    </div>
+    <div class="exp-card">
+      <span class="eicon">🧠</span>
+      <div class="etitle">Data & ML</div>
+      <p class="edesc">ML models for Meta ad interest recommendation and KPI prediction.</p>
+      <div class="etags">
+        <span class="etag">Python</span>
+        <span class="etag">Machine Learning</span>
+        <span class="etag">SQL</span>
+      </div>
+    </div>
+    <div class="exp-card">
+      <span class="eicon">🎨</span>
+      <div class="etitle">Creative Strategy</div>
+      <p class="edesc">Ad creative design and content strategy aligned with campaign objectives.</p>
+      <div class="etags">
+        <span class="etag">Ad Creative</span>
+        <span class="etag">Social Media</span>
+        <span class="etag">Content Strategy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+  <div class="wrap">
+    <div class="label">Career</div>
+    <h2>Work Experience</h2>
+    <p class="sdesc">3+ years across agency, freelance, and full-time roles in digital advertising.</p>
+
+```
+<div class="timeline rev">
+
+  <div class="ti now">
+    <div class="tdot"></div>
+    <div class="ti-head">
+      <div class="ti-role">Digital Strategist</div>
+      <span class="tbadge bg-green">Current</span>
+    </div>
+    <div class="ti-co">Avond Studio · Contract · Hybrid</div>
+    <div class="ti-per">Sep 2025 – Present · 7 mos · Surabaya</div>
+    <ul class="ti-pts">
+      <li>Managed client budgets & end-to-end <strong>Meta Ads strategies</strong> across multiple accounts.</li>
+      <li>Daily optimization consistently targeting <strong>CPC below IDR 1,000</strong>.</li>
+      <li>Monthly performance reports & ad proposals for clients and prospects.</li>
+    </ul>
+  </div>
+
+  <div class="ti now">
+    <div class="tdot"></div>
+    <div class="ti-head">
+      <div class="ti-role">Ads Specialist</div>
+      <span class="tbadge bg-green">Current</span>
+    </div>
+    <div class="ti-co">PXP Ads · Self-employed · Remote</div>
+    <div class="ti-per">Feb 2025 – Present · 1 yr 2 mos · Surabaya</div>
+    <ul class="ti-pts">
+      <li>Meta & Google Ads campaigns with <strong>CTR up to 5.6%</strong> and <strong>CPC as low as Rp165</strong>.</li>
+      <li>Landing pages reducing cost per view to <strong>&lt;Rp450</strong>.</li>
+      <li>Facebook Pixel setup and full conversion tracking implementation.</li>
+    </ul>
+  </div>
+
+  <div class="ti">
+    <div class="tdot"></div>
+    <div class="ti-head">
+      <div class="ti-role">Associate Ad Ops Specialist</div>
+      <span class="tbadge bg-gray">Full-time</span>
+    </div>
+    <div class="ti-co">Zero One Digital · Remote</div>
+    <div class="ti-per">Jan 2022 – Jan 2025 · 3 yrs 1 mo · Jakarta</div>
+    <ul class="ti-pts">
+      <li>Executed Meta & Google campaigns per performance marketing strategy.</li>
+      <li>Built reporting templates that <strong>saved 70% of reporting time</strong>.</li>
+      <li>ML models for <strong>Meta ad interest recommendation</strong> & KPI prediction.</li>
+    </ul>
+  </div>
+
+  <div class="ti">
+    <div class="tdot"></div>
+    <div class="ti-head">
+      <div class="ti-role">Data Analyst</div>
+      <span class="tbadge bg-gray">Internship</span>
+    </div>
+    <div class="ti-co">Zero One Digital · Remote</div>
+    <div class="ti-per">Jul 2021 – Dec 2021 · 6 mos · Jakarta</div>
+    <ul class="ti-pts">
+      <li>Comprehensive ad & organic performance reporting.</li>
+      <li>Supported Meta & Google Ads campaign operations.</li>
+      <li>Built creative performance tracking systems.</li>
+    </ul>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="label">Credentials</div>
+    <h2>Certifications</h2>
+    <p class="sdesc">Verified across performance marketing, analytics, and data science.</p>
+    <div class="hint">← Geser →</div>
+  </div>
+  <div class="hscroll rev">
+    <div class="cert-card"><span class="cicon">🎯</span><div class="cname">AI-Powered Performance Ads</div><div class="corg">Google Skillshop</div><div class="cyear">Jan 2025</div></div>
+    <div class="cert-card"><span class="cicon">🔍</span><div class="cname">Google Ads Search</div><div class="corg">Google Skillshop</div><div class="cyear">Jan 2025</div></div>
+    <div class="cert-card"><span class="cicon">📈</span><div class="cname">Google Analytics</div><div class="corg">Google Skillshop</div><div class="cyear">Feb 2025</div></div>
+    <div class="cert-card"><span class="cicon">🌐</span><div class="cname">Fundamentals of Digital Marketing</div><div class="corg">Google Skillshop</div><div class="cyear">Feb 2025</div></div>
+    <div class="cert-card"><span class="cicon">📱</span><div class="cname">Social Media Marketing</div><div class="corg">HubSpot Academy</div><div class="cyear">Jul 2025</div></div>
+    <div class="cert-card"><span class="cicon">💡</span><div class="cname">Digital Advertising Certified</div><div class="corg">HubSpot Academy</div><div class="cyear">Jul 2025</div></div>
+    <div class="cert-card"><span class="cicon">🏷️</span><div class="cname">Brand Positioning & Branding</div><div class="corg">MySkill</div><div class="cyear">Feb 2026</div></div>
+    <div class="cert-card"><span class="cicon">🤖</span><div class="cname">Data Analyst Professional Academy</div><div class="corg">Digital Talent Scholarship</div><div class="cyear">2021 · 88 Jam</div></div>
+    <div class="cert-card"><span class="cicon">🧬</span><div class="cname">Machine Learning FGA</div><div class="corg">Digital Talent Scholarship</div><div class="cyear">2021 · 160 Jam</div></div>
+    <div class="cert-card"><span class="cicon">🐍</span><div class="cname">Data Visualization with Python</div><div class="corg">IBM</div><div class="cyear">Jun 2021</div></div>
+    <div class="cert-card"><span class="cicon">📊</span><div class="cname">Data Analysis Using Python</div><div class="corg">IBM</div><div class="cyear">May 2021</div></div>
+    <div class="cert-card"><span class="cicon">📋</span><div class="cname">Microsoft Excel</div><div class="corg">Camp404</div><div class="cyear">Jun 2021</div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+  <div class="wrap">
+    <div class="label">Education</div>
+    <h2>Academic Background</h2>
+    <div class="edu-card rev">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="edu-deg">S1 Ilmu Ekonomi</div>
+        <div class="edu-sch">UIN Sunan Ampel Surabaya</div>
+        <div class="edu-chips">
+          <span class="echip">2017 – 2021</span>
+          <span class="echip hi">GPA 3.62</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="wrap">
+    <div class="label">Let's Talk</div>
+    <h2>Get In Touch</h2>
+    <p class="sdesc">Open to Digital Marketing Specialist, Marketing Advisor, and Performance Marketing roles.</p>
+
+```
+<div class="ccard rev">
+  <h3>Ready to collaborate?</h3>
+  <p>Hubungi via WhatsApp untuk respon cepat, atau email untuk inquiry lebih detail.</p>
+
+  <div class="clinks">
+    <a href="https://wa.me/6289515192171" target="_blank" class="clink">
+      <div class="cl-icon" style="background:#F0FDF4;">💬</div>
+      <div><div class="cl-t">WhatsApp</div><div class="cl-v">089515192171</div></div>
+      <span class="cl-arr">→</span>
+    </a>
+    <a href="mailto:abizaregi7@gmail.com" class="clink">
+      <div class="cl-icon" style="background:#FEF2F2;">✉️</div>
+      <div><div class="cl-t">Email</div><div class="cl-v">abizaregi7@gmail.com</div></div>
+      <span class="cl-arr">→</span>
+    </a>
+    <a href="https://linkedin.com/in/abizar-egi-mahendra" target="_blank" class="clink">
+      <div class="cl-icon" style="background:#EFF6FF;">💼</div>
+      <div><div class="cl-t">LinkedIn</div><div class="cl-v">abizar-egi-mahendra</div></div>
+      <span class="cl-arr">→</span>
+    </a>
+  </div>
+
+  <button onclick="downloadCV()" class="dl-btn">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+    Download CV (PDF)
+  </button>
+</div>
+```
+
+  </div>
+</section>
+
+<footer>© 2025 Abizar Egi Mahendra · Surabaya, Indonesia</footer>
+
+<script>
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), {threshold:0.08});
+document.querySelectorAll('.rev').forEach(el => obs.observe(el));
+
+function downloadCV() {
+  const h = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>CV - Abizar Egi Mahendra</title>
+<style>body{font-family:Arial,sans-serif;max-width:760px;margin:0 auto;padding:36px;color:#111;font-size:13px;line-height:1.6}h1{font-size:22px;margin-bottom:3px}
+.sub{color:#555;font-size:13px;margin-bottom:3px}.con{color:#888;font-size:11px;margin-bottom:18px}
+.stats{display:flex;gap:20px;background:#F8F8F8;padding:12px 16px;border-radius:8px;margin-bottom:18px}
+.sv{font-size:17px;font-weight:bold;color:#2563EB;display:block}.sl{font-size:10px;color:#aaa}
+h2{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#2563EB;border-bottom:1px solid #eee;padding-bottom:4px;margin:20px 0 10px}
+.j{margin-bottom:14px}.jt{font-weight:bold;font-size:13px}.jm{color:#888;font-size:11px;margin-bottom:5px}
+ul{padding-left:15px;color:#444}li{margin-bottom:2px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.c{font-size:12px;padding:4px 0;border-bottom:1px solid #f0f0f0}.co{color:#aaa;font-size:10px}
+@media print{body{padding:20px}}</style></head><body>
+
+<h1>Abizar Egi Mahendra</h1>
+<div class="sub">Performance Marketing Specialist | Meta Ads & Google Ads Certified | 3+ Years Agency Experience</div>
+<div class="con">📍 Surabaya, Indonesia &nbsp;|&nbsp; 📱 089515192171 &nbsp;|&nbsp; ✉️ abizaregi7@gmail.com &nbsp;|&nbsp; 🔗 linkedin.com/in/abizar-egi-mahendra</div>
+<div class="stats">
+<div><span class="sv">5.6%</span><span class="sl">Best CTR</span></div>
+<div><span class="sv">Rp165</span><span class="sl">Lowest CPC</span></div>
+<div><span class="sv">−70%</span><span class="sl">Report Time</span></div>
+<div><span class="sv">3+ Yrs</span><span class="sl">Experience</span></div>
+</div>
+<h2>About</h2>
+<p>Performance Marketing Specialist with 3 years of hands-on experience executing campaigns on Meta and Google Ads. Skilled in building landing pages, setting up conversion tracking, and designing reporting templates that cut reporting time by 70%. Achieved CTRs up to 5.6% and CPC as low as Rp165. Currently open to opportunities in digital marketing teams.</p>
+<h2>Work Experience</h2>
+<div class="j"><div class="jt">Digital Strategist — Avond Studio</div><div class="jm">Contract · Sep 2025–Present · Surabaya, Hybrid</div><ul><li>Managed client advertising budgets and end-to-end Meta Ads strategies across multiple accounts.</li><li>Daily optimization consistently targeting CPC below IDR 1,000.</li><li>Monthly performance reports and advertising proposals for clients.</li></ul></div>
+<div class="j"><div class="jt">Ads Specialist — PXP Ads</div><div class="jm">Self-employed · Feb 2025–Present · Surabaya, Remote</div><ul><li>Meta &amp; Google Ads campaigns achieving CTR up to 5.6% and CPC as low as Rp165.</li><li>Landing pages reducing cost per view to &lt;Rp450.</li><li>Facebook Pixel setup and full conversion tracking implementation.</li></ul></div>
+<div class="j"><div class="jt">Associate Ad Ops Specialist — Zero One Digital</div><div class="jm">Full-time · Jan 2022–Jan 2025 · Jakarta, Remote</div><ul><li>Executed Meta &amp; Google campaigns per performance marketing strategy.</li><li>Reporting templates that saved 70% of reporting time.</li><li>ML models for Meta ad interest recommendation and KPI prediction.</li></ul></div>
+<div class="j"><div class="jt">Data Analyst (Internship) — Zero One Digital</div><div class="jm">Jul–Dec 2021 · Jakarta, Remote</div><ul><li>Ad &amp; organic performance reporting.</li><li>Supported Meta &amp; Google Ads operations and creative tracking systems.</li></ul></div>
+<h2>Education</h2>
+<div class="j"><div class="jt">S1 Ilmu Ekonomi — UIN Sunan Ampel Surabaya</div><div class="jm">2017–2021 · GPA 3.62</div></div>
+<h2>Certifications</h2>
+<div class="cg">
+<div class="c">AI-Powered Performance Ads<div class="co">Google Skillshop · Jan 2025</div></div>
+<div class="c">Google Ads Search Certification<div class="co">Google Skillshop · Jan 2025</div></div>
+<div class="c">Google Analytics Certification<div class="co">Google Skillshop · Feb 2025</div></div>
+<div class="c">Fundamentals of Digital Marketing<div class="co">Google Skillshop · Feb 2025</div></div>
+<div class="c">Social Media Marketing<div class="co">HubSpot Academy · Jul 2025</div></div>
+<div class="c">Digital Advertising Certified<div class="co">HubSpot Academy · Jul 2025</div></div>
+<div class="c">Data Analyst Professional Academy<div class="co">Digital Talent Scholarship · 2021</div></div>
+<div class="c">Machine Learning FGA<div class="co">Digital Talent Scholarship · 2021</div></div>
+<div class="c">Data Visualization with Python<div class="co">IBM · 2021</div></div>
+<div class="c">Data Analysis Using Python<div class="co">IBM · 2021</div></div>
+</div>
+<h2>Skills</h2>
+<p>Meta Ads · Google Ads · Facebook Pixel · Conversion Tracking · Google Analytics · Data Studio · Performance Marketing · Social Media Marketing · Digital Advertising · Python · Machine Learning · SQL · Landing Page Development · Data Visualization · Microsoft Excel</p>
+</body></html>`;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([h], {type:'text/html'}));
+  a.download = 'CV_Abizar_Egi_Mahendra.html';
+  a.click();
+  setTimeout(() => alert('File downloaded!\nBuka di browser → Ctrl+P / Cmd+P → Save as PDF'), 400);
+}
+</script>
+</body>
+</html>
